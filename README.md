@@ -16,7 +16,7 @@ Todas as variáveis de ambiente do projeto visam fazer integração com algum servi
 
 Para executar com docker, basta executar o seguinte comando na pasta raiz do projeto para gerar a imagem:
 
-``` docker build -t health_med -f .\DeleteUserInfoSaga\Dockerfile . ```
+``` docker build -t delete_user_info_saga -f .\DeleteUserInfoSaga\Dockerfile . ```
 
 Para subir o container, basta executar o seguinte comando:
 
@@ -26,7 +26,7 @@ docker run -e AWS_ACCESS_KEY_DYNAMO=""
 -e AWS_SQS_LOG=""
 -e AWS_SQS_GROUP_ID_LOG=""
 -e USER_API_GATEWAY_URL=""
--p 8081:8081 -p 8080:8080 health_med
+-p 8081:8081 -p 8080:8080 delete_user_info_saga
 ```
 
 Observação: as variáveis de ambiente não estão com valores para não expor meu ambiente AWS. Para utilizar o serviço corretamente, é necessário definir um valor para as variáveis.
